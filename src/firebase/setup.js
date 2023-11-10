@@ -1,16 +1,17 @@
 import { initializeApp } from "firebase/app";
 import {getAuth,GoogleAuthProvider} from "firebase/auth"
-
+import {getFirestore} from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDbbzVwmAV87tU5s-mhqUFTKyO2no_ih9E",
-  authDomain: "dictionary-app-d66de.firebaseapp.com",
-  projectId: "dictionary-app-d66de",
-  storageBucket: "dictionary-app-d66de.appspot.com",
-  messagingSenderId: "779541490572",
-  appId: "1:779541490572:web:ac5f4add40c46ad64944a9"
+  apiKey: "AIzaSyCKxaGACMAhBQCXJxcdG6PCX-XNqkj73AE",
+  authDomain: "bbc-clone-a71d4.firebaseapp.com",
+  projectId: "bbc-clone-a71d4",
+  storageBucket: "bbc-clone-a71d4.appspot.com",
+  messagingSenderId: "319821684163",
+  appId: "1:319821684163:web:81f42b9f7c848c704b3176"
 };
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
-export const googleAuthProvider = new GoogleAuthProvider()
+export const googleProvider = new GoogleAuthProvider(app)
+export const database = getFirestore(app)

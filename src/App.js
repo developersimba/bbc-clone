@@ -1,18 +1,18 @@
 import React from 'react'
-import Home from './components/Home'
-import Navbar from './components/Navbar'
-import { Routes,Route } from 'react-router-dom'
-import Dictionary from './components/Dictionary'
+import Signin from './components/Signin'
+import { Route, Routes } from 'react-router-dom'
+import Main from './components/Main'
+import NewsDetails from './components/NewsDetails'
 
 function App() {
   return (
-    <div style={{backgroundColor:"#3AAFA9",height:"100vh"}}>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/dictionary' element={<Dictionary/>}/>
-      </Routes>
-    </div>
+    <>
+    <Routes>
+      <Route path="/signin" element={<Signin/>}/>
+      <Route path='/' element={<Main/>}/>
+      <Route path='/details' element={<NewsDetails/>}/>
+    </Routes>
+    </>
   )
 }
 
